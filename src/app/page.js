@@ -4,6 +4,7 @@ import { Carousel, CarouselCaption, Col, Row } from "react-bootstrap";
 import ContactUs from "./Compoents/ContactUs";
 import SlickSlider from "./Compoents/SlickSlider";
 import Baners from "./Compoents/Baners";
+import Solution from "./Compoents/Solution";
 
 export default function Home() {
   return (
@@ -32,47 +33,22 @@ export default function Home() {
       {/* solution  */}
 
       <div id="solutions" className="container my-5">
-      <h2 className="text-center mb-4">Our Solutions</h2>
-      <div className="row">
-        <div className="col-md-4">
-          <div className="card">
-            <img src="/solution1.jpg" className="card-img-top" alt="Automated Ultrasonic Systems" />
-            <div className="card-body">
-              <h5 className="card-title">Automated Ultrasonic Systems</h5>
-              <p className="card-text">Advanced NDT systems with high-speed multi-channel ultrasonic testing.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card">
-            <img src="/solution2.jpg" className="card-img-top" alt="Portable Testing Solutions" />
-            <div className="card-body">
-              <h5 className="card-title">Portable Testing Solutions</h5>
-              <p className="card-text">Handheld and easy-to-use ultrasonic testing devices.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card">
-            <img src="/solution3.jpg" className="card-img-top" alt="Composite Testing Systems" />
-            <div className="card-body">
-              <h5 className="card-title">Composite Testing Systems</h5>
-              <p className="card-text">Custom solutions for defense, aerospace, and nuclear industries.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+       <Solution />
     </div>
 
 
 
 
     {/* clients */}
+    <div id="clients" className="container my-5">
     <SlickSlider />
+    </div>
 
 
      {/* contact us */}
+     <div id="contact" className="container my-5">
      <ContactUs />
+     </div>
     </div>
   );
 }
