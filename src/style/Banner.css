@@ -1,0 +1,72 @@
+.home1 {
+    position: relative;
+    background-image: url("../asserts/mainBanner-d804319e.webp");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+    margin-top: -10px;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.home1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000c;
+    z-index: 1;
+}
+
+.banner1 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.banner1 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+
+.banner2 {
+    text-align: justify;
+    font-size: 15px;
+    color: #fff;
+}
+
+.ribbon {
+    background-image: linear-gradient(180deg, #0d6ca3, #0e96c8);
+    fill: #0d6ca3;
+    position: relative;
+    line-height: 40px;
+    padding: 1px 34px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+    width: 357px;
+    right: 17px;
+    z-index: 9;
+    text-align: center;
+    font-size: 16px;
+    top: -10px;
+}
+
+.fold.bottom.left, .fold.bottom.right {
+    border-width: 12px;
+    border-color: transparent #0d6ca3 transparent transparent;
+    top: 30px;
+}
+
+.second-data {
+    display: flex !important;
+    justify-content: end !important;
+    align-items: end !important;
+    text-align: end !important;
+}
