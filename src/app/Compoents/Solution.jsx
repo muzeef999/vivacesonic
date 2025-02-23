@@ -39,10 +39,10 @@ const solutions = [
     image: image4,
   },
   {
-    title: "A Four axis Immersion Testing System for Evaluation of SS/Ti Fusion Joints",
+    title: "A Four axis Immersion Testing System for Evaluation of dis similar metal Fusion Joints",
     client: "Godrej/ B.A.R.C",
     description:
-      "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and used for inspection and further exports of the parts. A typical C-Scan ",
+   "For utrasonic evaluation of the bonding between dis similar materials using high frequency focussed transducers the results are presented in real time A and C-scan along with total capture of data. Further analysis and measurement on data is performed to comprehensively evaluate the bond strength with the aid of A, B and C-scan imaging presentation and analysis.",
     image: image5,
   },
   {
