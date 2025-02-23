@@ -7,20 +7,21 @@ import image4 from "@/asserts/soluctions/4.png";
 import image5 from "@/asserts/soluctions/5.png";
 import image6 from "@/asserts/soluctions/6.png";
 import image7 from "@/asserts/soluctions/7.png";
+import { FaYoutube } from "react-icons/fa";
 
 const solutions = [
   {
     title: "Automated Ultrasonic Case Depth Measurement System",
     client: "Kirloskar Oil Engines Ltd.",
     description:
- "An ultrasonic Case depth Measurement system, this works on measuring back scattered signals from an induction hardened crank shaft. It uses s set of two transducers to cover a larger section of the part, and also has provision to measure case depth at the fillet corners \n A similar case depth measurement system is supplied to Tata Motors at their Pune, & Sanand Plant.",
+   "An ultrasonic Case depth Measurement system, this works on measuring back scattered signals from an induction hardened crank shaft. It uses s set of two transducers to cover a larger section of the part, and also has provision to measure case depth at the fillet corners a continuous monitoring of case depth along the circumference is recorded and displayed.Case depth measurement for martisite to ferrite-pearlite grain structures as well as martinsite to martinsite grain structures in induction case hardened crank shafts have been evaluated and measured with an advanced signal processing techniques adopted on back scattered ultrasonic signals",
     image: image1,
   },
   {
     title: "A multi-Axis Ultrasonic Inspection System for Composite Shells",
     client: "L & T Defense, Coimbatore",
     description:
-     "This system was custom designed for use with Dry Coupled Ultrasonic Probes . The probes were designed and manufacture by us. The system presents the inspection results in a C-Scan image, which the user can easily perform the task of interpretations, and measurements of defect parameters like length, location, area etc.",
+      "This system was custom designed for use with Dry Coupled Ultrasonic Probes . The probes were designed and manufacture by us. The system presents the inspection results in a C-Scan image, which the user can easily perform the task of interpretations, and measurements of defect parameters like length, location, area etc.",
     image: image2,
   },
   {
@@ -61,69 +62,82 @@ const solutions = [
 ];
 
 const Solution = () => {
+
   return (
     <div className="container py-5">
-    <h2 className="text-center mb-5 fw-bold">Our Solutions</h2>
-    <br/>
-    <div className="row g-5">
-
-      {solutions.map((solution, index) => (
-        <div key={index} className="row align-items-center">
-          {/* Alternating Layout */}
-          {index % 2 === 0 ? (
-            <>
-              {/* Left Side - Image */}
-              <div className="col-md-6">
-                <Image
-                  src={solution.image}
-                  alt={solution.title}
-                  layout="responsive"
-                  priority
-                  className="img-fluid rounded-4 shadow-lg"
-                />
-              </div>
-              {/* Right Side - Content */}
-              <div className="col-md-6">
-                <div className="p-4">
-                  <h5 className="fw-bold">{solution.title}</h5>
-                  <p className="text-muted">
-                    <b>Client:</b> {solution.client}
-                  </p>
-                  <p>{solution.description}</p>
-                  <button className="btn btn-primary btn-sm">Learn More</button>
+      <h2 className="text-center mb-5 fw-bold">Our Solutions</h2>
+      <br />
+      <div className="row g-5">
+        {solutions.map((solution, index) => (
+          <div key={index} className="row align-items-center mb-5">
+            {/* Alternating Layout */}
+            {index % 2 === 0 ? (
+              <>
+                {/* Left Side - Image */}
+                <div className="col-md-6">
+                  <Image
+                    src={solution.image}
+                    alt={solution.title}
+                    layout="responsive"
+                    priority
+                    className="img-fluid rounded-4 shadow-lg"
+                  />
                 </div>
-              </div>
-            </>
-          ) : (
-            <>
-              {/* Left Side - Content */}
-              <div className="col-md-6">
-                <div className="p-4">
-                  <h5 className="fw-bold">{solution.title}</h5>
-                  <p className="text-muted">
-                    <b>Client:</b> {solution.client}
-                  </p>
-                  <p>{solution.description}</p>
-                  <button className="btn btn-primary btn-sm">Learn More</button>
+                {/* Right Side - Content */}
+                <div className="col-md-6">
+                  <div className="p-4">
+                    <h5 className="fw-bold">{solution.title}</h5>
+                    <p className="text-muted">
+                      <b>Client:</b> {solution.client}
+                    </p>
+                    <p>{solution.description}</p>
+                    <button
+                      className="btn btn-danger btn-sm d-flex align-items-center gap-2"
+                      
+                    >
+                      <FaYoutube size={16} />
+                      Watch on YouTube
+                    </button>
+                  </div>
                 </div>
-              </div>
-              {/* Right Side - Image */}
-              <div className="col-md-6">
-                <Image
-                  src={solution.image}
-                  alt={solution.title}
-                  layout="responsive"
-                  priority
-                  className="img-fluid rounded-4 shadow-lg"
-                />
-              </div>
-            </>
-          )}
-        </div>
-      ))}
-      <br/>
+              </>
+            ) : (
+              <>
+          
+                {/* Left Side - Content */}
+                <div className="col-md-6">
+                  <div className="p-4">
+                    <h5 className="fw-bold">{solution.title}</h5>
+                    <p className="text-muted">
+                      <b>Client:</b> {solution.client}
+                    </p>
+                    <p>{solution.description}</p>
+                    <button
+                      className="btn btn-danger btn-sm d-flex align-items-center gap-2"
+                      
+                    >
+                      <FaYoutube size={16} />
+                      Watch on YouTube
+                    </button>
+                  </div>
+                </div>
+                {/* Right Side - Image */}
+                <div className="col-md-6">
+                  <Image
+                    src={solution.image}
+                    alt={solution.title}
+                    layout="responsive"
+                    priority
+                    className="img-fluid rounded-4 shadow-lg"
+                  />
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+        <br />
+      </div>
     </div>
-  </div>
   );
 };
 

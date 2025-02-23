@@ -3,7 +3,7 @@ import ContactUs from "./Compoents/ContactUs";
 import SlickSlider from "./Compoents/SlickSlider";
 import Baners from "./Compoents/Baners";
 import Solution from "./Compoents/Solution";
-import  founder from "../asserts/founder.jpg"
+import  founder from "../asserts/founder.webp"
 
 export default function Home() {
   return (

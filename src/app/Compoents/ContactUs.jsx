@@ -7,6 +7,7 @@ const ContactUs = () => {
 
   return (
     <div className="container py-5">
+       <h2 className="text-center mb-5 fw-bold">Contact Us</h2>
       <div className="row">
         {/* Left Side - Contact Details */}
         <div className="col-md-6 d-flex flex-column justify-content-center align-items-start text-start p-4">

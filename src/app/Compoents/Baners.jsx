@@ -12,13 +12,13 @@ const Baners = () => {
                 <div style={{zIndex:9}}>
                     <p className='banner0'>WELCOME TO <span className='banner4' style={{color:'red'}}>VIVACE SONICS</span>   </p>
                     <p className='banner1'>We Design & Build Custom Solutions for Unique Challenges.</p>
-                    <p className='banner2'>To become the leader, we mainly focus on the quality, price and the timely delivery of the project we are hired for. By delivering all the values we make sure we are fulfilling all the needs of our customer and getting a good feedback from them.</p>
+                    <p className='banner2'>Our commitment to excellence drives us to prioritize quality, affordability, and timely project delivery. By consistently delivering value, we ensure customer satisfaction and build lasting trust through positive feedback.</p>
                 </div>
              </div>
              <div className='d-flex second-data col-md-6'>
               <div className='bannerleadform' style={{zIndex:9}}>
                 <div className='ribbon'>
-                  <span>Book a free Consultation</span>
+                  <span>Feel free to talk to me.</span>
                   <span className='fold bottom right'></span>
                   <span className='fold bottom left'></span>
                 </div>
