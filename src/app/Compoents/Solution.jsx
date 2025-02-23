@@ -40,16 +40,16 @@ const solutions = [
   },
   {
     title: "A Four axis Immersion Testing System for Evaluation of dis similar metal Fusion Joints",
-    client: "Godrej/ B.A.R.C",
+    client: "",
     description:
    "For utrasonic evaluation of the bonding between dis similar materials using high frequency focussed transducers the results are presented in real time A and C-scan along with total capture of data. Further analysis and measurement on data is performed to comprehensively evaluate the bond strength with the aid of A, B and C-scan imaging presentation and analysis.",
     image: image5,
   },
   {
-    title: "A Tube to Sheet Weld Inspection System for NPCIL project",
-    client: "Godrej /Nuclear Power Corpn Ltd. ",
+    title: "A Tube to Sheet Weld Inspection System",
+    client: "",
     description:
-      "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and used for inspection and further exports of the parts. A typical C-Scan ",
+      "A customized immersion inspection system for evaluation of tube to sheet welded joints with automated ID scanner, OD scanner and other weld configurations has been implemented. The user is provided with a real time A and B scan images with an optimised adaptation of signal processig techniques. Defect evaluation is automated and optimized to measure length and count of defects.",
     image: image6,
   },
   {
