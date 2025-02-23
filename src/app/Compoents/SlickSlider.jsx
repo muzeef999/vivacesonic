@@ -87,7 +87,7 @@ const SlickSlider = () => {
               src={image.src}
               alt={image.alt}
               width={100}
-              height={80}
+              height={100}
               priority
             />
           </div>

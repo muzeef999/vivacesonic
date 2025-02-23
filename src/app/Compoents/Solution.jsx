@@ -35,7 +35,7 @@ const solutions = [
     title: "A Portable C-Scan Machine for Honeycomb Panels with Dry Coupling Probes",
     client: "Dynamitic Technologies, Bangalore with Dry Contact Manual Probes",
     description:
-      "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and used for inspection and further exports of the parts. A typical C-Scan ",
+      "Portable machine for inspection of Honey comb panels of Aluminum and Carbon based materials. The system has provision for generating C-Scan images by manual movement of a set of through transmission dry coupling probes.",
     image: image4,
   },
   {
