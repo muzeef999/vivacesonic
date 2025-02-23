@@ -4,14 +4,15 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '@/style/SlickSlider.css';
-import icon1 from '@/asserts/logos/1.png'
-import icon2 from '@/asserts/logos/2.png'
-import icon3 from '@/asserts/logos/3.png'
-import icon4 from '@/asserts/logos/4.png'
-import icon5 from '@/asserts/logos/5.png'
-import icon6 from '@/asserts/logos/6.png'
-import icon7 from '@/asserts/logos/7.png'
-import icon8 from '@/asserts/logos/8.png'
+import icon1 from '@/asserts/logos/1.jpg'
+import icon2 from '@/asserts/logos/2.jpg'
+import icon3 from '@/asserts/logos/3.jpg'
+import icon4 from '@/asserts/logos/4.jpg'
+import icon5 from '@/asserts/logos/5.jpg'
+import icon6 from '@/asserts/logos/6.jpg'
+import icon7 from '@/asserts/logos/7.jpg'
+import icon8 from '@/asserts/logos/8.jpg'
+import icon9 from '@/asserts/logos/9.jpg'
 import Image from 'next/image';
 
 // Importing images dynamically to avoid loading all at once
@@ -24,6 +25,7 @@ const iconImages = [
   { src: icon6, alt: "Icon 6" },
   { src: icon7, alt: "Icon 7" },
   { src: icon8, alt: "Icon 8" },
+  { src: icon9, alt: "Icon 9" },
   // Add more icons here as necessary
 ];
 

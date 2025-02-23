@@ -26,9 +26,9 @@ const solutions = [
   },
   {
     title: "A large area Flat Bed Scanner for Aero-Space Composite",
-    client: "Lockheed Martine Aero-structures Ltd. , Hyd.",
+    client: "Aerospace Domain.",
     description:
-      "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and used for inspection and further exports of the parts. A typical C-Scan ",
+      "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and uses pulse through transmission method. A real-time A-Scan and C-Scan images are generated and recorded for offline analysis. User specific reports are generated for acceptance of inspected parts.",
     image: image3,
   },
   {

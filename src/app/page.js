@@ -27,7 +27,7 @@ export default function Home() {
             With a career in <strong>Ultrasonics design and instrumentation</strong> since 1976, Vilas Gopal Kulkarni initially worked at <strong>ECIL</strong> before establishing his own company in 1986.
           </p>
           <p>
-            With <strong>five decades</strong> of expertise, the company has been delivering <strong>one-of-a-kind automation solutions</strong> in <strong>Ultrasonic Products</strong> for <strong>Aerospace, Defence, and Rail Testing</strong>.
+            With <strong>five decades</strong> of expertise, the company has been delivering <strong>one-of-a-kind automation solutions</strong> in <strong>Ultrasonic Products</strong> for <strong>Aerospace, Defence, and Commercial Applications</strong>.
           </p>
           <ul>
             <li>Pioneering <strong>global-level automated ultrasonic solutions</strong> in India for multiple decades.</li>
@@ -63,7 +63,7 @@ export default function Home() {
 
 
     {/* clients */}
-    <div id="clients" className="container my-5">
+    <div id="clients" className=" my-5">
     <SlickSlider />
     </div>
 
