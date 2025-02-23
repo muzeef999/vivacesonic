@@ -26,35 +26,35 @@ const solutions = [
   },
   {
     title: "A large area Flat Bed Scanner for Aero-Space Composite",
-    client: "Tata Lockheed Martine Aero-structures Ltd. , Hyd",
+    client: "Lockheed Martine Aero-structures Ltd. , Hyd.",
     description:
       "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and used for inspection and further exports of the parts. A typical C-Scan ",
     image: image3,
   },
   {
-    title: "A large area Flat Bed Scanner for Aero-Space Composite",
-    client: "Tata Lockheed Martine Aero-structures Ltd. , Hyd",
+    title: "A Portable C-Scan Machine for Honeycomb Panels with Dry Coupling Probes",
+    client: "Dynamitic Technologies, Bangalore with Dry Contact Manual Probes",
     description:
       "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and used for inspection and further exports of the parts. A typical C-Scan ",
     image: image4,
   },
   {
-    title: "A large area Flat Bed Scanner for Aero-Space Composite",
-    client: "Tata Lockheed Martine Aero-structures Ltd. , Hyd",
+    title: "A Four axis Immersion Testing System for Evaluation of SS/Ti Fusion Joints",
+    client: "Godrej/ B.A.R.C",
     description:
       "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and used for inspection and further exports of the parts. A typical C-Scan ",
     image: image5,
   },
   {
-    title: "A large area Flat Bed Scanner for Aero-Space Composite",
-    client: "Tata Lockheed Martine Aero-structures Ltd. , Hyd",
+    title: "A Tube to Sheet Weld Inspection System for NPCIL project",
+    client: "Godrej /Nuclear Power Corpn Ltd. ",
     description:
       "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and used for inspection and further exports of the parts. A typical C-Scan ",
     image: image6,
   },
   {
-    title: "A large area Flat Bed Scanner for Aero-Space Composite",
-    client: "Tata Lockheed Martine Aero-structures Ltd. , Hyd",
+    title: "A fully Automated Ultrasonic Inspection System for Missile Motor Casing with Two sets of Inspection modes i.e. Pulse Echo , and Through Transmission.",
+    client: "Economical Explosives Ltd.",
     description:
       "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and used for inspection and further exports of the parts. A typical C-Scan ",
     image: image7,

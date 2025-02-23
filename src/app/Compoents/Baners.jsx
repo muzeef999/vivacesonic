@@ -18,7 +18,7 @@ const Baners = () => {
              <div className='d-flex second-data col-md-6'>
               <div className='bannerleadform' style={{zIndex:9}}>
                 <div className='ribbon'>
-                  <span>Feel free to talk to me.</span>
+                  <span>Feel free to talk to us.</span>
                   <span className='fold bottom right'></span>
                   <span className='fold bottom left'></span>
                 </div>
