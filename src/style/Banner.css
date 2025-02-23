@@ -10,6 +10,15 @@
     z-index: 0;
 }
 
+
+@font-face {
+    font-family: "BaqoosGronraBold"; /* Custom font name */
+    src: url("../font/BaqoosGronraBold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  
 .home1:before {
     content: "";
     position: absolute;
@@ -19,6 +28,13 @@
     height: 100%;
     background-color: #000c;
     z-index: 1;
+}
+
+.banner0 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+  
 }
 
 .banner1 {
@@ -41,6 +57,12 @@
     color: #fff;
 }
 
+.banner4 {
+    color: #fe0000;
+    font-weight: 600;
+    font-family: "BaqoosGronraBold", sans-serif;
+}
+
 .ribbon {
     background-image: linear-gradient(180deg, #fe0000, #ffb3b3);
     fill: #0d6ca3;
@@ -58,15 +80,27 @@
     top: -10px;
 }
 
-.fold.bottom.left, .fold.bottom.right {
-    border-width: 12px;
-    border-color: transparent #0d6ca3 transparent transparent;
-    top: 30px;
+
+.fold { 
+    position: absolute;
+    border-style: solid;
 }
+
+
 
 .second-data {
     display: flex !important;
     justify-content: end !important;
     align-items: end !important;
     text-align: end !important;
+}
+
+.bannerleadform {
+    width: 325px;
+    right: 0%;
+    background: #fff;
+    border-radius: 8px;
+    margin: 60px auto auto;
+    border: 1px solid #fe0000;
+    box-shadow: 0 2px 9px 7px #00000038;
 }

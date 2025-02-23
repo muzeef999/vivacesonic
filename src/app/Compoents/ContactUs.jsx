@@ -1,18 +1,9 @@
 "use client"
 import { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaUser, FaMobileAlt } from "react-icons/fa";
+import Form from "./Form";
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({ name: "", mobile: "", email: "", location: "" });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted", formData);
-  };
 
   return (
     <div className="container py-5">
@@ -47,25 +38,7 @@ const ContactUs = () => {
         {/* Right Side - Form */}
         <div className="col-md-6 p-4">
           <h4 className="mb-4 text-center" style={{color:'red'}}>Get in Touch</h4>
-          <form onSubmit={handleSubmit} className="p-4 shadow rounded" style={{ border: "1px solid #ddd" }}>
-            <div className="mb-3 d-flex align-items-center border rounded p-2">
-              <FaUser className="me-2" />
-              <input type="text" name="name" placeholder="Your Name" className="form-control border-0" onChange={handleChange} required />
-            </div>
-            <div className="mb-3 d-flex align-items-center border rounded p-2">
-              <FaMobileAlt className="me-2" />
-              <input type="tel" name="mobile" placeholder="Your Mobile Number" className="form-control border-0" onChange={handleChange} required />
-            </div>
-            <div className="mb-3 d-flex align-items-center border rounded p-2">
-              <FaEnvelope className="me-2" />
-              <input type="email" name="email" placeholder="Your Email" className="form-control border-0" onChange={handleChange} required />
-            </div>
-            <div className="mb-3 d-flex align-items-center border rounded p-2">
-              <FaMapMarkerAlt className="me-2" />
-              <input type="text" name="location" placeholder="Your Location" className="form-control border-0" onChange={handleChange} required />
-            </div>
-            <button type="submit" className="btn text-white w-100" style={{ backgroundColor: "red" }}>Submit</button>
-          </form>
+         <Form />
         </div>
       </div>
     </div>
