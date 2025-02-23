@@ -54,9 +54,9 @@ const solutions = [
   },
   {
     title: "A fully Automated Ultrasonic Inspection System for Missile Motor Casing with Two sets of Inspection modes i.e. Pulse Echo , and Through Transmission.",
-    client: "Economical Explosives Ltd.",
+    client: "Economical Explosives Ltd",
     description:
-      "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and used for inspection and further exports of the parts. A typical C-Scan ",
+     "Dual mode automated ultrasonic inspection system that employs pulse echo mode for inspection of tube to rubber bonding and a dry coupled roller probe arrangeemnt for inspection of rubber to rubber bonding at both ends of the tube. Real time data in A and C-scan format is stored and is available for further anaysis and evaluaton of the inspected parts. The reports are genearated in end-user defined format with traceabilty of inspection parameters along with component identifcation.",
     image: image7,
   },
 ];
