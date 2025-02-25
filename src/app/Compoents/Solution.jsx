@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import image1 from "@/asserts/soluctions/1.png";
-import image2 from "@/asserts/soluctions/2.png";
-import image3 from "@/asserts/soluctions/3.png";
-import image4 from "@/asserts/soluctions/4.png";
-import image5 from "@/asserts/soluctions/5.png";
-import image6 from "@/asserts/soluctions/6.png";
-import image7 from "@/asserts/soluctions/7.png";
+import image1 from "@/asserts/soluctions/1.webp";
+import image2 from "@/asserts/soluctions/2.webp";
+import image3 from "@/asserts/soluctions/3.webp";
+import image4 from "@/asserts/soluctions/4.webp";
+import image5 from "@/asserts/soluctions/5.webp";
+import image6 from "@/asserts/soluctions/6.webp";
+import image7 from "@/asserts/soluctions/7.webp";
 import { FaYoutube } from "react-icons/fa";
 
 const solutions = [
