@@ -37,7 +37,7 @@ export default function Home() {
           </ul>
           </div>
           </div>
-          <div className="col-md-6  justify-content-center align-items-center">
+          <div className="col-md-6  order-0 order-md-1 justify-content-center align-items-center">
                <div>
                      <center>
                     <div style={{width:'60%'}}>    

@@ -8,7 +8,7 @@ const Baners = () => {
     <div className='home1 container-fluid'>
       <div className='container-data'>
         <div className='row'>
-             <div className='d-flex  align-items-center col-md-6' style={{marginTop:'10%'}}>
+             <div className='d-flex  align-items-center col-md-6 p-3'>
                 <div style={{zIndex:9}}>
                     <p className='banner0'>WELCOME TO <span className='banner4' style={{color:'red'}}>VIVACE SONICs</span>   </p>
                     <p className='banner1'>We Design & Build Custom Solutions for Unique Challenges.</p>
@@ -16,8 +16,7 @@ const Baners = () => {
                 </div>
              </div>
              <div className='d-flex second-data col-md-6'>
-              <div className='sideGif'>
-
+              <div  className='sideGif'>
               </div>
              </div>
         </div>

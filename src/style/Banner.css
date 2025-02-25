@@ -24,6 +24,14 @@
     background-size: contain; /* Adjusts GIF size within the div */
 }
 
+@media (max-width: 768px) {
+    .sideGif {
+        height: 20vh;  /* Covers full screen height */
+        background-size: cover;  /* Ensures full coverage */
+    }
+}
+
+
 @font-face {
     font-family: "BaqoosGronraBold"; /* Custom font name */
     src: url("../font/BaqoosGronraBold.otf") format("opentype");

@@ -74,7 +74,7 @@ const Solution = () => {
             {index % 2 === 0 ? (
               <>
                 {/* Left Side - Image */}
-                <div className="col-md-6">
+                <div className="col-md-6 order-1 order-md-0">
                   <Image
                     src={solution.image}
                     alt={solution.title}
@@ -122,7 +122,7 @@ const Solution = () => {
                   </div>
                 </div>
                 {/* Right Side - Image */}
-                <div className="col-md-6">
+                <div className="col-md-6 order-0 order-md-1">
                   <Image
                     src={solution.image}
                     alt={solution.title}
