@@ -10,16 +10,19 @@ import image6 from "@/asserts/soluctions/6.webp";
 import image7 from "@/asserts/soluctions/7.webp";
 import image8 from "@/asserts/soluctions/8.webp";
 import image9 from "@/asserts/soluctions/9.webp";
+import image10 from "@/asserts/soluctions/10.webp";
 
 import hoverImage1 from "@/asserts/soluctions/1h.webp";
 import hoverImage2 from "@/asserts/soluctions/2h.webp";
 import hoverImage3 from "@/asserts/soluctions/3h.webp";
 import hoverImage4 from "@/asserts/soluctions/3h.webp";
-import hoverImage5 from "@/asserts/soluctions/3h.webp";
+import hoverImage5 from "@/asserts/soluctions/5h.gif";
 import hoverImage6 from "@/asserts/soluctions/3h.webp";
 import hoverImage7 from "@/asserts/soluctions/7h.webp";
 import hoverImage8 from "@/asserts/soluctions/8h.webp";
 import hoverImage9 from "@/asserts/soluctions/8h.webp";
+
+import hoverImage10 from "@/asserts/soluctions/10h.webp";
 
 
 import { FaYoutube } from "react-icons/fa";
@@ -99,8 +102,8 @@ const solutions = [
 An Ultrasonic Bar/Tube inspection system with single or multiple Transducers 
 Inspection, recording, paint marking and report generation utilities make this a complete inspection system.
 `,
-    image: image7,
-    hoverImage: hoverImage7,
+    image: image10,
+    hoverImage: hoverImage10,
 
   },
   {
