@@ -59,6 +59,27 @@ const solutions = [
      "Dual mode automated ultrasonic inspection system that employs pulse echo mode for inspection of tube to rubber bonding and a dry coupled roller probe arrangeemnt for inspection of rubber to rubber bonding at both ends of the tube. Real time data in A and C-scan format is stored and is available for further anaysis and evaluaton of the inspected parts. The reports are genearated in end-user defined format with traceabilty of inspection parameters along with component identifcation.",
     image: image7,
   },
+
+
+  {
+    title: "ULTRASONIC IMMERSION TESTING SYSTEM FOR INSAT TANKS.",
+    client: "",
+    description:
+    "An ultrasonic immersion testing system for the inspection of electron-beam welded joints was fully designed, manufactured, and installed. The system is fully automated with precision system mechanics, including vacuum-assisted tank holders.",
+    image: image7,
+  },
+
+  {
+    title: "ULTRASONIC IMMERSION TESTING SYSTEM FOR INSAT COMPONENTS",
+    client: "",
+    description:
+   `An ultrasonic immersion testing system for the inspection of INSAT components like shells, gas ports, rings, etc. The system was fully designed, manufactured, and installed.
+
+The above systems were designed using 5-axis mechanics, fully automated transducer manipulators for transmitting and receiving a 15 MHz ultrasonic focused beam for the detection and mapping of defects.
+
+An indigenous product in the year 1995-96.`,
+    image: image7,
+  },
 ];
 
 const Solution = () => {

@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import {
   FaFacebook,
   FaInstagram,
@@ -12,6 +13,24 @@ import Image from "next/image";
 import logo from "@/asserts/logo.png"
 
 const Footer = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
  <div>
   <hr/>
@@ -105,7 +124,7 @@ const Footer = () => {
 
       {/* Floating Buttons */}
       <div className="floating-buttons">
-        <button className="scroll-to-top btn btn-danger">
+        <button  onClick={scrollToTop}  className="scroll-to-top btn btn-danger">
           <FaArrowUp />
         </button>
         <button className="whatsapp-icon btn btn-success">
