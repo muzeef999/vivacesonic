@@ -13,23 +13,35 @@
 
 
 .sideGif {
-    background-image: url("../asserts/cScan_image.gif");
-    height: 700px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;  /* Moves content to the right */
-    align-items: flex-end;  /* Moves content to the bottom */
+    background-image: linear-gradient(to right, black, transparent), 
+    url("../asserts/cScan_image.gif");
     background-repeat: no-repeat;
-    background-position: bottom right; /* Places the GIF at the bottom-right */
-    background-size: contain; /* Adjusts GIF size within the div */
+   background-size: cover; 
+   height: 700px;
+   z-index: 99;
 }
 
+
+.first-col-text{
+    width: 70%;
+}
+
+
 @media (max-width: 768px) {
+
+    
+.first-col-text{
+    width: 100%;
+}
     .sideGif {
-        height: 20vh;  /* Covers full screen height */
-        background-size: cover;  /* Ensures full coverage */
+        background-image: linear-gradient(to bottom, black, transparent), 
+                          url("../asserts/cScan_image.gif");
+        background-size: cover;
+        height: 300px; /* Adjust height for mobile */
     }
 }
+
+
 
 
 @font-face {
@@ -109,12 +121,6 @@
 
 
 
-.second-data {
-    display: flex !important;
-    justify-content: end !important;
-    align-items: end !important;
-    text-align: end !important;
-}
 
 .bannerleadform {
     width: 325px;
