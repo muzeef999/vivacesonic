@@ -1,3 +1,5 @@
+import { connectDB } from '@/lib/mongodb';
+import Blog from '@/models/Blog';
 import { NextResponse } from 'next/server';
 
 export async function GET(request, { params }) {
@@ -5,8 +7,11 @@ export async function GET(request, { params }) {
 
   try {
 
+ await connectDB();
+        const blog = await Blog.findOne({ slug });
+
     return NextResponse.json(
-      { success: true, message: `Blog "${slug}" fetched successfully.` },
+      { success: true, blog },
       { status: 200 }
     );
   } catch (error) {

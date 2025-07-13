@@ -1,10 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import useReactQuearyGetApi from "@/hooks/useReactQuearyGetApi";
 import { fetchAllBlogs } from "@/service/blogService";
+import { Button, Modal } from "react-bootstrap";
 
 const BlogPage = () => {
+   const [show, setShow] = useState(false);
+
+  const handleOpen = () => setShow(true);
+  const handleClose = () => setShow(false);
+
+
   const { data, isLoading, error } = useReactQuearyGetApi({
     queryFn: fetchAllBlogs,
     queryKey: ["blogs"],
@@ -17,6 +24,8 @@ const BlogPage = () => {
 
   return (
     <div className="container py-5">
+
+      <Button variant="primary" onClick={handleOpen}>New blods</Button>
       <h2 className="text-center mb-4 fw-bold display-6">📚 Latest Blogs</h2>
       <div className="row g-4">
         {data?.blogs?.map((blog) => (
@@ -47,6 +56,25 @@ const BlogPage = () => {
           </div>
         ))}
       </div>
+
+
+          {/* Modal */}
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Create New Blog</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cancel
+          </Button>
+          <Button variant="success" onClick={() => alert("Blog Saved!")}>
+            Save Blog
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };

@@ -1,0 +1,41 @@
+.custom-navbar {
+    background: rgba(255, 255, 255, 0.1);
+    /* translucent */
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 80px !important;
+   border-radius: 4px;
+}
+
+.nav_link {
+    color: #FFF;
+    text-decoration: none;
+    padding: 12px 20px;       /* Vertical & horizontal clickable space */
+  margin-right: 12px;
+   display: inline-block;
+}
+.contactbutton {
+    background-color: #FF3329;
+    padding: 12px 32px;
+    border-radius: 4px;
+    clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
+    color: #FFF;
+    text-decoration: none;
+}
+
+.dropdown_link {
+  position: relative;
+  color: #FFF;
+  z-index: 1000; /* higher than most elements */
+  overflow: visible;
+}
+
+.nav-link {
+    color: #FFF !important;
+}
+

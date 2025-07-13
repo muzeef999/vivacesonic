@@ -58,27 +58,27 @@ const Footer = () => {
             <h4>Quick Links</h4>
             <ul className="list-unstyled">
               <li>
-                <a href="#"  style={{textDecoration:'none' , color:'#000'}}>
+                <a href="#"  style={{textDecoration:'none' , color:'#FFF'}}>
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" style={{textDecoration:'none', color:'#000'}}>
+                <a href="#" style={{textDecoration:'none', color:'#FFF'}}>
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" style={{textDecoration:'none', color:'#000'}}>
+                <a href="#" style={{textDecoration:'none', color:'#FFF'}}>
                   Our Projects
                 </a>
               </li>
               <li>
-                <a href="#" style={{textDecoration:'none', color:'#000'}}>
+                <a href="#" style={{textDecoration:'none', color:'#FFF'}}>
                   Clients
                 </a>
               </li>
               <li>
-                <a href="#" style={{textDecoration:'none', color:'#000'}}>
+                <a href="#" style={{textDecoration:'none', color:'#FFF'}}>
                   Contact Us
                 </a>
               </li>
@@ -110,11 +110,11 @@ const Footer = () => {
           <div className="col">
             <p className="mb-0">2024 &copy; All Rights Reserved.</p>
             <div className="policy-links">
-              <a href="#" className="mx-2" style={{color:'#000'}}>
+              <a href="#" className="mx-2" style={{color:'#FFF'}}>
                 Privacy Policy
               </a>{" "}
               |{" "}
-              <a href="#" className="mx-2" style={{color:'#000'}}>
+              <a href="#" className="mx-2" style={{color:'#FFF'}}>
                 Terms and Conditions
               </a>
             </div>

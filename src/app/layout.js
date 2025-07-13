@@ -26,7 +26,7 @@ const queryClient = new QueryClient()
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <QueryClientProvider  client={queryClient}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
