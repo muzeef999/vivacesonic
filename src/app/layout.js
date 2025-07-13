@@ -1,10 +1,12 @@
-"use client"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-quill/dist/quill.snow.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import NavbarComponent from "../Compoents/Navabar";
 import Footer from "../Compoents/Footer";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import dynamic from "next/dynamic";
+
+const ClientLayout =  dynamic(() => import("@/app/ClientLayout"))
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,27 +18,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// export const metadata = {
-//   title: "Advanced Ultrasonic Solutions & NDT Equipment",
-//   description: "VIVACE SONICS PVT. LTD is a leading provider of ultrasonic testing solutions, NDT equipment, and composite testing systems. Based in Hyderabad, we specialize in high-quality probes, control systems, and non-destructive testing solutions for defense, nuclear, and space industries.",
-// };
-
-const queryClient = new QueryClient()
-
+export const metadata = {
+  title: "Advanced Ultrasonic Solutions & NDT Equipment",
+  description:
+    "VIVACE SONICS PVT. LTD is a leading provider of ultrasonic testing solutions, NDT equipment, and composite testing systems. Based in Hyderabad, we specialize in high-quality probes, control systems, and non-destructive testing solutions for defense, nuclear, and space industries.",
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" >
-      <QueryClientProvider  client={queryClient}>
+    
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ClientLayout>
         <NavbarComponent />
-        
+
         {children}
-       <Footer />
+        <Footer />
+        </ClientLayout>
       </body>
-      </QueryClientProvider>
+
     </html>
+    
   );
 }

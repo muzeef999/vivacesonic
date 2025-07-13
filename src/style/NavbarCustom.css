@@ -10,6 +10,8 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     height: 80px !important;
    border-radius: 4px;
+     z-index: 1030; /* or 1040 */
+
 }
 
 .nav_link {
@@ -38,4 +40,10 @@
 .nav-link {
     color: #FFF !important;
 }
+
+.dropdown-menu {
+  z-index: 1055 !important;
+  position: absolute !important;
+}
+
 

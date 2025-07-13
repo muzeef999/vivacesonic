@@ -113,7 +113,7 @@ const NavbarComponent = () => {
               style={{color:'#FFF'}}
             >
               <Link href={`/${item.slug}`} passHref>
-                <span className="dropdown_link">{item.shortName}</span>
+                <span className="dropdown-menu">{item.shortName}</span>
               </Link>
             </NavDropdown.Item>
           ))}
@@ -125,7 +125,7 @@ const NavbarComponent = () => {
     </Navbar.Collapse>
 
     {/* 📞 CTA Button */}
-    <Link className="contactbutton ms-lg-3" href="/contact">Contact</Link>
+    <Link className="contactbutton ms-lg-3" href="/contact">Contact &nbsp; &nbsp; &nbsp;</Link>
   </Container>
 </Navbar>
 

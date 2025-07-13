@@ -2,6 +2,13 @@ import Image from 'next/image'
 import React from 'react'
 import founder from "@/asserts/founder.webp";
 
+export const metadata = {
+  title: "About Us | Vilas Gopal Kulkarni - Ultrasonic Automation Expert",
+  description:
+    "Discover the journey of Vilas Gopal Kulkarni, a pioneer in ultrasonic automation solutions in India. With five decades of experience in aerospace, defence, and commercial ultrasonic applications.",
+  keywords:
+    "Vilas Gopal Kulkarni, ultrasonic automation, ECIL, aerospace ultrasonic, defence ultrasonic, ultrasonic solutions India, material evaluation, fused bonding, case depth analysis",
+};
 
 const page = () => {
   return (

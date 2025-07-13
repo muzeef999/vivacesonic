@@ -128,7 +128,7 @@ An indigenous product in the year 1995-96.`,
     hoverImage: hoverImage9,
 
   },
-];
+]; 
 
 const Solution = () => {
   const [hoverIndex, setHoverIndex] = useState(null);

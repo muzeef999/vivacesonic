@@ -1,9 +1,9 @@
 "use client";
-
 import React, { useState } from "react";
 import useReactQuearyGetApi from "@/hooks/useReactQuearyGetApi";
 import { fetchAllBlogs } from "@/service/blogService";
 import { Button, Modal } from "react-bootstrap";
+import PostBlog from "@/Compoents/PostBlog";
 
 const BlogPage = () => {
    const [show, setShow] = useState(false);
@@ -25,7 +25,11 @@ const BlogPage = () => {
   return (
     <div className="container py-5">
 
-      <Button variant="primary" onClick={handleOpen}>New blods</Button>
+
+         <br/>
+         <br/>
+         <br/>
+      <Button variant="primary" onClick={handleOpen}>New blogs</Button>
       <h2 className="text-center mb-4 fw-bold display-6">📚 Latest Blogs</h2>
       <div className="row g-4">
         {data?.blogs?.map((blog) => (
@@ -64,7 +68,7 @@ const BlogPage = () => {
           <Modal.Title>Create New Blog</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          
+          <PostBlog />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
