@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import useReactQuearyGetApi from "@/hooks/useReactQuearyGetApi";
-import { fetchAllBlogs } from "@/service/blogService";
+import useReactQuearyGetApi from "../../hooks/useReactQuearyGetApi";
+import { fetchAllBlogs } from "../../service/blogService";
 import { Button, Modal } from "react-bootstrap";
-import PostBlog from "@/Compoents/PostBlog";
+import PostBlog from "../../Compoents/PostBlog";
 
 const BlogPage = () => {
    const [show, setShow] = useState(false);
@@ -33,7 +33,7 @@ const BlogPage = () => {
       <h2 className="text-center mb-4 fw-bold display-6">📚 Latest Blogs</h2>
       <div className="row g-4">
         {data?.blogs?.map((blog) => (
-          <div className="col-12 col-md-6 col-lg-4" key={blog._id}>
+          <div className="col-12 col-md-6 col-lg-4 cursor-pointer" key={blog._id}>
             <div className="card h-100 shadow-sm border-0 hover-shadow transition">
               <img
                 src={blog.image}

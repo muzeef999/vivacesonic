@@ -1,4 +1,4 @@
-import SlickSlider from '@/Compoents/SlickSlider'
+import SlickSlider from '../../Compoents/SlickSlider'
 import React from 'react'
 
   export const metadata = {

@@ -1,36 +1,36 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import image1 from "@/asserts/soluctions/1.webp";
-import image2 from "@/asserts/soluctions/2.webp";
-import image3 from "@/asserts/soluctions/3.webp";
-import image4 from "@/asserts/soluctions/4.webp";
-import image5 from "@/asserts/soluctions/5.webp";
-import image6 from "@/asserts/soluctions/6.webp";
-import image7 from "@/asserts/soluctions/7.webp";
-import image8 from "@/asserts/soluctions/8.webp";
-import image9 from "@/asserts/soluctions/9.webp";
-import image10 from "@/asserts/soluctions/10.webp";
+import image1 from "../asserts/soluctions/1.webp";
+import image2 from "../asserts/soluctions/2.webp";
+import image3 from "../asserts/soluctions/3.webp";
+import image4 from "../asserts/soluctions/4.webp";
+import image5 from "../asserts/soluctions/5.webp";
+import image6 from "../asserts/soluctions/6.webp";
+import image7 from "../asserts/soluctions/7.webp";
+import image8 from "../asserts/soluctions/8.webp";
+import image9 from "../asserts/soluctions/9.webp";
+import image10 from "../asserts/soluctions/10.webp";
 
-import hoverImage1 from "@/asserts/soluctions/1h.webp";
-import hoverImage2 from "@/asserts/soluctions/2h.webp";
-import hoverImage3 from "@/asserts/soluctions/3h.webp";
-import hoverImage4 from "@/asserts/soluctions/3h.webp";
-import hoverImage5 from "@/asserts/soluctions/5h.gif";
-import hoverImage6 from "@/asserts/soluctions/3h.webp";
-import hoverImage7 from "@/asserts/soluctions/7h.webp";
-import hoverImage8 from "@/asserts/soluctions/8h.webp";
-import hoverImage9 from "@/asserts/soluctions/8h.webp";
-
-import hoverImage10 from "@/asserts/soluctions/10h.webp";
-
-
-import { FaYoutube } from "react-icons/fa";
+import hoverImage1 from "../asserts/soluctions/1h.webp";
+import hoverImage2 from "../asserts/soluctions/2h.webp";
+import hoverImage3 from "../asserts/soluctions/3h.webp";
+import hoverImage4 from "../asserts/soluctions/3h.webp";
+import hoverImage5 from "../asserts/soluctions/5h.gif";
+import hoverImage6 from "../asserts/soluctions/3h.webp";
+import hoverImage7 from "../asserts/soluctions/7h.webp";
+import hoverImage8 from "../asserts/soluctions/8h.webp";
+import hoverImage9 from "../asserts/soluctions/8h.webp";
+import { TiArrowRight } from "react-icons/ti";
+import hoverImage10 from "../asserts/soluctions/10h.webp";
+import Link from "next/link";
 
 const solutions = [
   {
     title: "Automated Ultrasonic Case Depth Measurement System",
     client: "Kirloskar Oil Engines Ltd.",
+    slug: "ultrasonic-case-depth",
+
     description:
       "An ultrasonic Case depth Measurement system, this works on measuring back scattered signals from an induction hardened crank shaft. It uses s set of two transducers to cover a larger section of the part, and also has provision to measure case depth at the fillet corners a continuous monitoring of case depth along the circumference is recorded and displayed.Case depth measurement for martisite to ferrite-pearlite grain structures as well as martinsite to martinsite grain structures in induction case hardened crank shafts have been evaluated and measured with an advanced signal processing techniques adopted on back scattered ultrasonic signals",
     image: image1,
@@ -39,6 +39,7 @@ const solutions = [
   {
     title: "A multi-Axis Ultrasonic Inspection System for Composite Shells",
     client: "L & T Defense, Coimbatore",
+    slug: "multi-axis-composite-shells",
     description:
       "This system was custom designed for use with Dry Coupled Ultrasonic Probes . The probes were designed and manufacture by us. The system presents the inspection results in a C-Scan image, which the user can easily perform the task of interpretations, and measurements of defect parameters like length, location, area etc.",
     image: image2,
@@ -47,21 +48,21 @@ const solutions = [
   {
     title: "A large area Flat Bed Scanner for Aero-Space Composite",
     client: "Aerospace Domain.",
+    slug: "flatbed-scanner-aerospace",
     description:
       "Totally designed and manufactured by us for an export oriented AeroSpace Company. This has a Span of inspection of 4 meters X 3 meters and uses pulse through transmission method. A real-time A-Scan and C-Scan images are generated and recorded for offline analysis. User specific reports are generated for acceptance of inspected parts.",
     image: image3,
     hoverImage: hoverImage3,
-
   },
   {
     title:
       "A Portable C-Scan Machine for Honeycomb Panels with Dry Coupling Probes",
     client: "Dynamitic Technologies, Bangalore with Dry Contact Manual Probes",
+    slug: "portable-cscan-honeycomb",
     description:
       "Portable machine for inspection of Honey comb panels of Aluminum and Carbon based materials. The system has provision for generating C-Scan images by manual movement of a set of through transmission dry coupling probes.",
     image: image4,
     hoverImage: hoverImage4,
-
   },
   {
     title:
@@ -70,55 +71,54 @@ const solutions = [
     description:
       "For utrasonic evaluation of the bonding between dis similar materials using high frequency focussed transducers the results are presented in real time A and C-scan along with total capture of data. Further analysis and measurement on data is performed to comprehensively evaluate the bond strength with the aid of A, B and C-scan imaging presentation and analysis.",
     image: image5,
+    slug: "4axis-immersion-metal-joints",
     hoverImage: hoverImage5,
-
   },
   {
     title: "A Tube to Sheet Weld Inspection System",
     client: "",
+    slug: "tube-sheet-weld-inspection",
     description:
       "A customized immersion inspection system for evaluation of tube to sheet welded joints with automated ID scanner, OD scanner and other weld configurations has been implemented. The user is provided with a real time A and B scan images with an optimised adaptation of signal processig techniques. Defect evaluation is automated and optimized to measure length and count of defects.",
     image: image6,
     hoverImage: hoverImage6,
-
   },
   {
     title:
       "A fully Automated Ultrasonic Inspection System for Missile Motor Casing with Two sets of Inspection modes i.e. Pulse Echo , and Through Transmission.",
     client: "Economical Explosives Ltd",
+    slug: "missile-motor-casing-inspection",
     description:
       "Dual mode automated ultrasonic inspection system that employs pulse echo mode for inspection of tube to rubber bonding and a dry coupled roller probe arrangeemnt for inspection of rubber to rubber bonding at both ends of the tube. Real time data in A and C-scan format is stored and is available for further anaysis and evaluaton of the inspected parts. The reports are genearated in end-user defined format with traceabilty of inspection parameters along with component identifcation.",
     image: image7,
     hoverImage: hoverImage7,
-
   },
 
   {
-    title:
-        "Rotating Head Ultrasonic Bar/Tube Testing system",
+    title: "Rotating Head Ultrasonic Bar/Tube Testing system",
     client: "",
-    description:
-    `High speed Rota Head with multi-channel real time ultrasonic data acquisition and digital processing system reports a real time inspection chart of the configured transducer.
+    slug: "rotating-head-bar-tube",
+    description: `High speed Rota Head with multi-channel real time ultrasonic data acquisition and digital processing system reports a real time inspection chart of the configured transducer.
 An Ultrasonic Bar/Tube inspection system with single or multiple Transducers 
 Inspection, recording, paint marking and report generation utilities make this a complete inspection system.
 `,
     image: image10,
     hoverImage: hoverImage10,
-
   },
   {
     title: "Legacy-A ULTRASONIC IMMERSION TESTING SYSTEM FOR INSAT TANKS.",
     client: "",
+    slug: "legacy-a-insat-tanks",
     description:
       "An ultrasonic immersion testing system for the inspection of electron-beam welded joints was fully designed, manufactured, and installed. The system is fully automated with precision system mechanics, including vacuum-assisted tank holders.",
     image: image8,
     hoverImage: hoverImage8,
-
   },
 
   {
     title: "Legacy-B ULTRASONIC IMMERSION TESTING SYSTEM FOR INSAT COMPONENTS",
     client: "",
+    slug: "legacy-b-insat-components",
     description: `An ultrasonic immersion testing system for the inspection of INSAT components like shells, gas ports, rings, etc. The system was fully designed, manufactured, and installed.
 
 The above systems were designed using 5-axis mechanics, fully automated transducer manipulators for transmitting and receiving a 15 MHz ultrasonic focused beam for the detection and mapping of defects.
@@ -126,9 +126,8 @@ The above systems were designed using 5-axis mechanics, fully automated transduc
 An indigenous product in the year 1995-96.`,
     image: image9,
     hoverImage: hoverImage9,
-
   },
-]; 
+];
 
 const Solution = () => {
   const [hoverIndex, setHoverIndex] = useState(null);
@@ -136,6 +135,7 @@ const Solution = () => {
   return (
     <div className="container py-5">
       <h2 className="text-center mb-5 fw-bold">Our Solutions</h2>
+      <br />
       <div className="row g-5">
         {solutions.map((solution, index) => (
           <div key={index} className="row align-items-center mb-5">
@@ -149,7 +149,11 @@ const Solution = () => {
                     onMouseLeave={() => setHoverIndex(null)}
                   >
                     <Image
-                      src={hoverIndex === index ? solution.hoverImage : solution.image}
+                      src={
+                        hoverIndex === index
+                          ? solution.hoverImage
+                          : solution.image
+                      }
                       alt={solution.title}
                       layout="responsive"
                       priority
@@ -161,14 +165,17 @@ const Solution = () => {
                 <div className="col-md-6">
                   <div className="p-4">
                     <h5 className="fw-bold">{solution.title}</h5>
-                    <p className="text-muted">
+                    <p style={{ color: "#FFF !important" }}>
                       <b>Client:</b> {solution.client}
                     </p>
                     <p>{solution.description}</p>
-                    <button className="btn btn-danger btn-sm d-flex align-items-center gap-2">
-                      <FaYoutube size={16} />
-                      Watch on YouTube
-                    </button>
+                    <Link
+                      href={`${solution.slug}`}
+                      className="btn btn-danger btn-sm d-inline-flex align-items-center gap-2 px-3"
+                    >
+                      Discover More
+                      <TiArrowRight size={20} />
+                    </Link>
                   </div>
                 </div>
               </>
@@ -182,10 +189,13 @@ const Solution = () => {
                       <b>Client:</b> {solution.client}
                     </p>
                     <p>{solution.description}</p>
-                    <button className="btn btn-danger btn-sm d-flex align-items-center gap-2">
-                      <FaYoutube size={16} />
-                      Watch on YouTube
-                    </button>
+                    <Link
+                      href={`${solution.slug}`}
+                      className="btn btn-danger btn-sm d-inline-flex align-items-center gap-2 px-3"
+                    >
+                      Discover More
+                      <TiArrowRight size={20} />
+                    </Link>
                   </div>
                 </div>
                 {/* Right Side - Image */}
@@ -196,7 +206,11 @@ const Solution = () => {
                     onMouseLeave={() => setHoverIndex(null)}
                   >
                     <Image
-                      src={hoverIndex === index ? solution.hoverImage : solution.image}
+                      src={
+                        hoverIndex === index
+                          ? solution.hoverImage
+                          : solution.image
+                      }
                       alt={solution.title}
                       layout="responsive"
                       priority

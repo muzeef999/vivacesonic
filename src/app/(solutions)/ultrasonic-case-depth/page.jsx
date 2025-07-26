@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import image1 from '@/asserts/soluctions/1.webp' // Adjust path if needed
-import hoverImage1 from '@/asserts/soluctions/1h.webp'
+import image1 from '../../../asserts/soluctions/1.webp' // Adjust path if needed
+import hoverImage1 from '../../../asserts/soluctions/1h.webp'
 
 // ✅ SEO Metadata
 export const metadata = {
@@ -32,7 +32,7 @@ const page = () => {
         Automated Ultrasonic Case Depth Measurement System
       </h1>
 
-      <p className="text-center text-muted mb-5">
+      <p className="text-center mb-5">
         <strong>Client:</strong> Kirloskar Oil Engines Ltd.
       </p>
 

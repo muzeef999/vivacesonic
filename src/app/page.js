@@ -13,7 +13,6 @@ export default function Home() {
       <br />
 
       <div className="container my-5" id="about">
-        <h2 className="text-center mb-5 fw-bold">About Us</h2>
         <div className="row">
           <div className="col-md-6 d-flex justify-content-center align-items-center">
             <div>

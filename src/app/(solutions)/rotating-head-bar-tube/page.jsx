@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import image10 from '@/asserts/soluctions/10.webp' // Adjust the path based on your structure
-import hoverImage10 from '@/asserts/soluctions/10h.webp'
+import image10 from '../../../asserts/soluctions/10.webp' // Adjust the path based on your structure
+import hoverImage10 from '../../../asserts/soluctions/10h.webp'
 
 // ✅ SEO Metadata
 export const metadata = {

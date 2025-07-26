@@ -1,6 +1,6 @@
-import { connectDB } from "@/lib/mongodb";
-import Blog from "@/models/Blog";
-import { generateSlug } from "@/utils/generateSlug";
+import { connectDB } from "../../../../lib/mongodb";
+import Blog from "../../../../models/Blog";
+import { generateSlug } from "../../../../utils/generateSlug";
 import { NextResponse } from "next/server";
 
 // POST method

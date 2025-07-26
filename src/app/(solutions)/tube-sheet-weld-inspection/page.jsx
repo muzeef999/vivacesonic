@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import image6 from '@/asserts/soluctions/6.webp' // Update path as needed
-import hoverImage6 from '@/asserts/soluctions/3h.webp'
+import image6 from '../../../asserts/soluctions/6.webp' // Update path as needed
+import hoverImage6 from '../../../asserts/soluctions/3h.webp'
 
 // ✅ SEO Metadata 
 export const metadata = {

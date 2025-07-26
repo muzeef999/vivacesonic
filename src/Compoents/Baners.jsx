@@ -1,6 +1,5 @@
 import React from "react";
-import "@/style/Banner.css";
-import Form from "./Form";
+import "../style/Banner.css";
 
 const Baners = () => {
   return (

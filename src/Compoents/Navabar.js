@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Navbar, Container, Nav, NavDropdown, Form, Button } from "react-bootstrap";
 
-import "@/style/NavbarCustom.css";
+import "../style/NavbarCustom.css";
 
 const solutions = [
   {

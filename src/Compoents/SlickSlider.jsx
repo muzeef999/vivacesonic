@@ -3,16 +3,16 @@ import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '@/style/SlickSlider.css';
-import icon1 from '@/asserts/logos/1.jpg'
-import icon2 from '@/asserts/logos/2.jpg'
-import icon3 from '@/asserts/logos/3.jpg'
-import icon4 from '@/asserts/logos/4.jpg'
-import icon5 from '@/asserts/logos/5.jpg'
-import icon6 from '@/asserts/logos/6.jpg'
-import icon7 from '@/asserts/logos/7.jpg'
-import icon8 from '@/asserts/logos/8.jpg'
-import icon9 from '@/asserts/logos/9.jpg'
+import '../style/SlickSlider.css';
+import icon1 from '../asserts/logos/1.jpg'
+import icon2 from '../asserts/logos/2.jpg'
+import icon3 from '../asserts/logos/3.jpg'
+import icon4 from '../asserts/logos/4.jpg'
+import icon5 from '../asserts/logos/5.jpg'
+import icon6 from '../asserts/logos/6.jpg'
+import icon7 from '../asserts/logos/7.jpg'
+import icon8 from '../asserts/logos/8.jpg'
+import icon9 from '../asserts/logos/9.jpg'
 import Image from 'next/image';
 
 // Importing images dynamically to avoid loading all at once

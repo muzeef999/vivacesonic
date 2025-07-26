@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import founder from "@/asserts/founder.webp";
+import founder from "../../asserts/founder.webp";
 
 export const metadata = {
   title: "About Us | Vilas Gopal Kulkarni - Ultrasonic Automation Expert",
@@ -13,7 +13,6 @@ export const metadata = {
 const page = () => {
   return (
     <div className="container my-5">
-            <h2 className="text-center mb-5 fw-bold">About Us</h2>
             <div className="row">
               <div className="col-md-6 d-flex justify-content-center align-items-center">
                 <div>

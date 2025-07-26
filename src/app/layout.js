@@ -7,7 +7,7 @@ import NavbarComponent from "../Compoents/Navabar";
 import Footer from "../Compoents/Footer";
 import dynamic from "next/dynamic";
 
-const ClientLayout =  dynamic(() => import("@/app/ClientLayout"))
+const ClientLayout =  dynamic(() => import("../app/ClientLayout"))
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,8 +34,9 @@ export default function RootLayout({ children }) {
       >
         <ClientLayout>
         <NavbarComponent />
-
+         <main style={{marginTop:'150px'}}>
         {children}
+        </main>
         <Footer />
         </ClientLayout>
       </body>

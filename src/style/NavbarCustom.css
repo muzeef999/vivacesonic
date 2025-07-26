@@ -4,7 +4,7 @@
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  /* clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%); */
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   height: 80px !important;
@@ -27,7 +27,6 @@
   background-color: #ff3329;
   padding: 12px 32px;
   border-radius: 4px;
-  clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
   color: #fff;
   text-decoration: none;
 }

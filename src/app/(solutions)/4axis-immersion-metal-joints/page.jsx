@@ -1,8 +1,8 @@
 // app/projects/four-axis/page.jsx
 import React from 'react'
 import Image from 'next/image'
-import image5 from '@/asserts/soluctions/5.webp'       // Update paths as needed
-import hoverImage5 from '@/asserts/soluctions/5h.gif'
+import image5 from '../../../asserts/soluctions/5.webp'       // Update paths as needed
+import hoverImage5 from '../../../asserts/soluctions/5h.gif'
 
 // ✅ Page Metadata
 export const metadata = {

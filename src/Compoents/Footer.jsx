@@ -8,9 +8,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "@/style/Footer.css"
-import Image from "next/image";
-import logo from "@/asserts/logo.png"
+import "../style/Footer.css"
 
 const Footer = () => {
   const [showButton, setShowButton] = useState(false);
