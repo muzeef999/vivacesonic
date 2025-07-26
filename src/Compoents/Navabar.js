@@ -2,7 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown, Form, Button } from "react-bootstrap";
+
 import "@/style/NavbarCustom.css";
 
 const solutions = [
@@ -60,14 +61,14 @@ const solutions = [
 
 const NavbarComponent = () => {
   return (
-    <Navbar expand="lg" fixed="top" className="sticky">
-  <Container className="custom-navbar d-flex align-items-center">
-    {/* 🔰 Logo */}
-    <Navbar.Brand href="/">
-      <div style={{ width: "25%" }}>
-         <svg
+     <div className="container">
+      <Navbar  fixed="top" className="sticky">
+      <Container className="d-flex custom-navbar justify-content-between align-items-center">
+        {/* Logo */}
+        <Navbar.Brand href="/" className="text-white">
+            <svg
               id="logo"
-              width="100%"
+              width="25%"
               height="auto"
               viewBox="0 0 353 174"
               fill="none"
@@ -88,46 +89,58 @@ const NavbarComponent = () => {
                 strokeMiterlimit="10"
               />
             </svg>
-      </div>
-    </Navbar.Brand>
+        </Navbar.Brand>
 
-    {/* 📱 Toggle for mobile */}
-    <Navbar.Toggle aria-controls="navbarNav" />
-    <Navbar.Collapse id="navbarNav">
-      
-      {/* ✅ Centered Nav Links */}
-      <Nav className="mx-auto d-flex align-items-center gap-4">
-        <Link className="nav_link" href="/">Home</Link>
-        <Link className="nav_link" href="/about-us">About</Link>
+        {/* Toggle Button */}
+        <Navbar.Toggle aria-controls="navbarScroll" />
 
-        <NavDropdown
-          className="nav_link"
-          title="Solutions"
-          id="solutions-dropdown"
-          menuVariant="dark"
-        >
-          {solutions.map((item) => (
-            <NavDropdown.Item
-              as="span"
-              key={item.slug}
-              style={{color:'#FFF'}}
+        {/* Collapsible Section */}
+        <Navbar.Collapse id="navbarScroll">
+          <Nav className="ms-auto align-items-center" navbarScroll>
+            <Nav.Link as={Link} href="/" className="nav_link">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} href="/about-us" className="nav_link">
+              About
+            </Nav.Link>
+
+            {/* Dropdown: Solutions */}
+            <NavDropdown
+              title="Solutions"
+              id="solutions-dropdown"
+              menuVariant="dark"
+              className="nav_link dropdown_link"
             >
-              <Link href={`/${item.slug}`} passHref>
-                <span className="dropdown-menu">{item.shortName}</span>
-              </Link>
-            </NavDropdown.Item>
-          ))}
-        </NavDropdown>
+              {solutions.map((item) => (
+                <NavDropdown.Item key={item.slug} as="span">
+                  <Link href={`/${item.slug}`} passHref legacyBehavior>
+                    <a style={{ color: "#FFF", textDecoration: "none" }}>{item.shortName}</a>
+                  </Link>
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
 
-        <Link className="nav_link" href="/blog">Blogs</Link>
-        <Link className="nav_link" href="/our-clients">Clients</Link>
-      </Nav>
-    </Navbar.Collapse>
+            <Nav.Link as={Link} href="/quality" className="nav_link">
+              Quality
+            </Nav.Link>
+            <Nav.Link as={Link} href="/our-clients" className="nav_link">
+              Clients
+            </Nav.Link>
+            <Nav.Link as={Link} href="/blog" className="nav_link">
+              Blogs
+            </Nav.Link>
+            <Nav.Link as={Link} href="/career" className="nav_link">
+              Career
+            </Nav.Link>
 
-    {/* 📞 CTA Button */}
-    <Link className="contactbutton ms-lg-3" href="/contact">Contact &nbsp; &nbsp; &nbsp;</Link>
-  </Container>
-</Navbar>
+            <Link href="/contact" passHref legacyBehavior>
+              <a className="contactbutton ms-lg-3">Contact</a>
+            </Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    </div>
 
   );
 };

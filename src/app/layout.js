@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "react-quill/dist/quill.snow.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import NavbarComponent from "../Compoents/Navabar";
 import Footer from "../Compoents/Footer";
 import dynamic from "next/dynamic";

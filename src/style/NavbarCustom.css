@@ -1,49 +1,42 @@
 .custom-navbar {
-    background: rgba(255, 255, 255, 0.1);
-    /* translucent */
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    height: 80px !important;
-   border-radius: 4px;
-     z-index: 1030; /* or 1040 */
-
+  overflow: visible !important;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 80px !important;
+  border-radius: 4px;
+  z-index: 1030;
 }
 
 .nav_link {
-    color: #FFF;
-    text-decoration: none;
-    padding: 12px 20px;       /* Vertical & horizontal clickable space */
+  color: #fff !important;
+  text-decoration: none;
+  padding: 12px 20px;
   margin-right: 12px;
-   display: inline-block;
-}
-.contactbutton {
-    background-color: #FF3329;
-    padding: 12px 32px;
-    border-radius: 4px;
-    clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
-    color: #FFF;
-    text-decoration: none;
-}
-
-.dropdown_link {
-  position: relative;
-  color: #FFF;
-  z-index: 1000; /* higher than most elements */
-  overflow: visible;
 }
 
 .nav-link {
-    color: #FFF !important;
+  color: #fff !important;
+}
+
+.contactbutton {
+  background-color: #ff3329;
+  padding: 12px 32px;
+  border-radius: 4px;
+  clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
+  color: #fff;
+  text-decoration: none;
 }
 
 .dropdown-menu {
-  z-index: 1055 !important;
-  position: absolute !important;
+  z-index: 9999 !important;
+  background-color: #111; /* dark dropdown bg */
 }
 
-
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #FFF;
+}
