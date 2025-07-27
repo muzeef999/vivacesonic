@@ -29,16 +29,19 @@ export default function RootLayout({ children }) {
   return (
     
     <html lang="en">
-      <body
+      <body         style={{ minHeight: "100vh", margin: 0 }}
+
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
         <ClientLayout>
         <NavbarComponent />
-         <main style={{marginTop:'150px'}}>
+         <main style={{ marginTop: "150px", flex: 1 }}>
         {children}
         </main>
         <Footer />
         </ClientLayout>
+        </div>
       </body>
 
     </html>

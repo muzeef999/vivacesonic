@@ -2,71 +2,30 @@
 
 import React from "react";
 import Link from "next/link";
-import { Navbar, Container, Nav, NavDropdown, Form, Button } from "react-bootstrap";
-
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import "../style/NavbarCustom.css";
 
 const solutions = [
-  {
-    name: "Automated Ultrasonic Case Depth Measurement System",
-    shortName: "Ultrasonic Case Depth",
-    slug: "ultrasonic-case-depth",
-  },
-  {
-    name: "Multi-Axis Ultrasonic Inspection for Composite Shells",
-    shortName: "Multi-Axis Composite",
-    slug: "multi-axis-composite-shells",
-  },
-  {
-    name: "Flat Bed Scanner for Aero-Space Composite",
-    shortName: "Flatbed Scanner",
-    slug: "flatbed-scanner-aerospace",
-  },
-  {
-    name: "Portable C-Scan for Honeycomb Panels (Dry Coupling)",
-    shortName: "Portable C-Scan",
-    slug: "portable-cscan-honeycomb",
-  },
-  {
-    name: "Four Axis Immersion Testing for Dissimilar Metal Joints",
-    shortName: "4-Axis Immersion",
-    slug: "4axis-immersion-metal-joints",
-  },
-  {
-    name: "Tube to Sheet Weld Inspection System",
-    shortName: "Tube Weld Inspection",
-    slug: "tube-sheet-weld-inspection",
-  },
-  {
-    name: "Automated Ultrasonic for Missile Motor Casing",
-    shortName: "Missile Motor Casing",
-    slug: "missile-motor-casing-inspection",
-  },
-  {
-    name: "Rotating Head Bar/Tube Testing System",
-    shortName: "Rotating Head Tester",
-    slug: "rotating-head-bar-tube",
-  },
-  {
-    name: "Legacy-A: Immersion Testing for INSAT Tanks",
-    shortName: "Legacy-A Tanks",
-    slug: "legacy-a-insat-tanks",
-  },
-  {
-    name: "Legacy-B: Immersion Testing for INSAT Components",
-    shortName: "Legacy-B Components",
-    slug: "legacy-b-insat-components",
-  },
+  { name: "Automated Ultrasonic Case Depth Measurement System", shortName: "Ultrasonic Case Depth", slug: "ultrasonic-case-depth" },
+  { name: "Multi-Axis Ultrasonic Inspection for Composite Shells", shortName: "Multi-Axis Composite", slug: "multi-axis-composite-shells" },
+  { name: "Flat Bed Scanner for Aero-Space Composite", shortName: "Flatbed Scanner", slug: "flatbed-scanner-aerospace" },
+  { name: "Portable C-Scan for Honeycomb Panels (Dry Coupling)", shortName: "Portable C-Scan", slug: "portable-cscan-honeycomb" },
+  { name: "Four Axis Immersion Testing for Dissimilar Metal Joints", shortName: "4-Axis Immersion", slug: "4axis-immersion-metal-joints" },
+  { name: "Tube to Sheet Weld Inspection System", shortName: "Tube Weld Inspection", slug: "tube-sheet-weld-inspection" },
+  { name: "Automated Ultrasonic for Missile Motor Casing", shortName: "Missile Motor Casing", slug: "missile-motor-casing-inspection" },
+  { name: "Rotating Head Bar/Tube Testing System", shortName: "Rotating Head Tester", slug: "rotating-head-bar-tube" },
+  { name: "Legacy-A: Immersion Testing for INSAT Tanks", shortName: "Legacy-A Tanks", slug: "legacy-a-insat-tanks" },
+  { name: "Legacy-B: Immersion Testing for INSAT Components", shortName: "Legacy-B Components", slug: "legacy-b-insat-components" },
 ];
 
 const NavbarComponent = () => {
   return (
-     <div className="container">
-      <Navbar  fixed="top" className="sticky">
-      <Container className="d-flex custom-navbar justify-content-between align-items-center">
-        {/* Logo */}
-        <Navbar.Brand href="/" className="text-white">
-            <svg
+    <div className="container">
+      <Navbar fixed="top" className="sticky">
+        <Container className="d-flex custom-navbar justify-content-between align-items-center">
+          {/* Logo */}
+          <Link href="/" className="text-white navbar-brand">
+                   <svg
               id="logo"
               width="25%"
               height="auto"
@@ -89,59 +48,39 @@ const NavbarComponent = () => {
                 strokeMiterlimit="10"
               />
             </svg>
-        </Navbar.Brand>
 
-        {/* Toggle Button */}
-        <Navbar.Toggle aria-controls="navbarScroll" />
+          </Link>
 
-        {/* Collapsible Section */}
-        <Navbar.Collapse id="navbarScroll">
-          <Nav className="ms-auto align-items-center" navbarScroll>
-            <Nav.Link as={Link} href="/" className="nav_link">
-              Home
-            </Nav.Link>
-            <Nav.Link as={Link} href="/about-us" className="nav_link">
-              About
-            </Nav.Link>
+          {/* Toggle */}
+          <Navbar.Toggle aria-controls="navbarScroll" />
 
-            {/* Dropdown: Solutions */}
-            <NavDropdown
-              title="Solutions"
-              id="solutions-dropdown"
-              menuVariant="dark"
-              className="nav_link dropdown_link"
-            >
-              {solutions.map((item) => (
-                <NavDropdown.Item key={item.slug} as="span">
-                  <Link href={`/${item.slug}`} passHref legacyBehavior>
-                    <a style={{ color: "#FFF", textDecoration: "none" }}>{item.shortName}</a>
-                  </Link>
-                </NavDropdown.Item>
-              ))}
-            </NavDropdown>
+          {/* Menu */}
+          <Navbar.Collapse id="navbarScroll">
+            <Nav className="ms-auto align-items-center" navbarScroll>
+              <Link href="/" className="nav_link nav-link">Home</Link>
+              <Link href="/about-us" className="nav_link nav-link">About</Link>
 
-            <Nav.Link as={Link} href="/quality" className="nav_link">
-              Quality
-            </Nav.Link>
-            <Nav.Link as={Link} href="/our-clients" className="nav_link">
-              Clients
-            </Nav.Link>
-            <Nav.Link as={Link} href="/blog" className="nav_link">
-              Blogs
-            </Nav.Link>
-            <Nav.Link as={Link} href="/career" className="nav_link">
-              Career
-            </Nav.Link>
+              <NavDropdown title="Solutions" id="solutions-dropdown" menuVariant="dark" className="nav_link dropdown_link">
+                {solutions.map((item) => (
+                  <NavDropdown.Item key={item.slug} as="div">
+                    <Link href={`/${item.slug}`} className="dropdown-item text-white">
+                      {item.shortName}
+                    </Link>
+                  </NavDropdown.Item>
+                ))}
+              </NavDropdown>
 
-            <Link href="/contact" passHref legacyBehavior>
-              <a className="contactbutton ms-lg-3">Contact</a>
-            </Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+              <Link href="/quality" className="nav_link nav-link">Quality</Link>
+              <Link href="/our-clients" className="nav_link nav-link">Clients</Link>
+              <Link href="/blog" className="nav_link nav-link">Blogs</Link>
+              <Link href="/career" className="nav_link nav-link">Career</Link>
+
+              <Link href="/contact" className="contactbutton ms-lg-3">Contact</Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </div>
-
   );
 };
 
