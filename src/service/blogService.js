@@ -7,10 +7,8 @@ export const createBlog = async (blogData) => {
 };
 
 
-export const fetchAllBlogs  = async() => {
-     const res = await axiosInstance.get('/blog');
-     return res.data;
-}
+export const fetchAllBlogs = () => axiosInstance.get('/blog').then((res) => res.data)
+
 
 export const fetchBlogBySlug = async (slug) => {
   const res = await axiosInstance.get(`/blog/${slug}`);
