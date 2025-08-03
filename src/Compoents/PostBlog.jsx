@@ -1,16 +1,21 @@
-"use client"
+"use client";
+
+import { useMutation } from '@tanstack/react-query';
 import dynamic from 'next/dynamic';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { createBlog } from '../service/blogService';
+import { toast } from 'sonner';
 
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
-
+// Disable SSR for ReactQuill
+// const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const PostBlog = () => {
+  const [hasMounted, setHasMounted] = useState(false);
 
-const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     title: "",
-    content: "",
-    author: "Anonymous",
+    content: "Checking the data",
+    author: "",
     tags: "",
     image: "",
     metaTitle: "",
@@ -18,8 +23,11 @@ const [formData, setFormData] = useState({
     keywords: "",
   });
 
+  // Ensure hydration-safe behavior
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
-  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -28,40 +36,38 @@ const [formData, setFormData] = useState({
     }));
   };
 
-  const handleQuillChange = (value) => {
-    setFormData((prev) => ({
-      ...prev,
-      content: value,
-    }));
-  };
+  // const handleQuillChange = (value) => {
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     content: value,
+  //   }));
+  // };
 
-  const handleSubmit = async (e) => {
+  const { mutate, isLoading, error } = useMutation({
+    mutationFn: createBlog,
+    onSuccess: () => {
+      toast.success("Blog posted successfully ✅");
+    },
+    onError: () => {
+      toast.error("Invalid blog data ❌");
+    },
+  });
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const body = {
-      title: formData.title,
-      content: formData.content,
-      author: formData.author || "Anonymous",
+    const payload = {
+      ...formData,
       tags: formData.tags.split(",").map((tag) => tag.trim()),
-      image: formData.image,
-      metaTitle: formData.metaTitle,
-      metaDescription: formData.metaDescription,
       keywords: formData.keywords.split(",").map((word) => word.trim()),
     };
 
-    try {
-      const res = await axios.post("/api/blogs", body); // adjust endpoint as needed
-      alert("Blog posted successfully!");
-    } catch (err) {
-      console.error("Blog post failed:", err);
-      alert("Failed to post blog");
-    }
+    mutate(payload);
   };
 
+  if (!hasMounted) return null; // ⛔️ Prevents mismatch during SSR
 
   return (
-    <>
-
     <div className="container py-4">
       <h2 className="mb-4">Create Blog Post</h2>
       <form onSubmit={handleSubmit}>
@@ -75,12 +81,12 @@ const [formData, setFormData] = useState({
           required
         />
 
-        <ReactQuill
+        {/* <ReactQuill
           theme="snow"
           value={formData.content}
           onChange={handleQuillChange}
           className="mb-3"
-        />
+        /> */}
 
         <input
           type="text"
@@ -137,13 +143,11 @@ const [formData, setFormData] = useState({
         />
 
         <button type="submit" className="btn btn-primary w-100">
-          Submit Blog
+          {isLoading ? "Posting..." : "Submit Blog"}
         </button>
       </form>
     </div>
+  );
+};
 
-    </>
-  )
-}
-
-export default PostBlog
+export default PostBlog;

@@ -21,11 +21,13 @@ const solutions = [
 const NavbarComponent = () => {
   return (
     <div className="container">
-      <Navbar fixed="top" className="sticky">
-        <Container className="d-flex custom-navbar justify-content-between align-items-center">
-          {/* Logo */}
-          <Link href="/" className="text-white navbar-brand">
-                   <svg
+      <Navbar expand="lg" fixed="top" className="sticky">
+  <Container  className="custom-navbar d-flex justify-content-between align-items-center px-3 px-lg-5">
+    
+    {/* Logo */}
+    <Link href="/" className="navbar-brand">
+      {/* Your SVG Logo */}
+      <svg
               id="logo"
               width="25%"
               height="auto"
@@ -49,37 +51,43 @@ const NavbarComponent = () => {
               />
             </svg>
 
-          </Link>
+    </Link>
 
-          {/* Toggle */}
-          <Navbar.Toggle aria-controls="navbarScroll" />
+    {/* Toggle for mobile */}
+    <Navbar.Toggle aria-controls="navbarScroll" />
 
-          {/* Menu */}
-          <Navbar.Collapse id="navbarScroll">
-            <Nav className="ms-auto align-items-center" navbarScroll>
-              <Link href="/" className="nav_link nav-link">Home</Link>
-              <Link href="/about-us" className="nav_link nav-link">About</Link>
+    {/* Collapsible Menu */}
+    <Navbar.Collapse id="navbarScroll">
+      <Nav className="ms-auto align-items-lg-center gap-2 gap-lg-4 text-white" navbarScroll>
+        <Link href="/" className="nav-link">Home</Link>
+        <Link href="/about-us" className="nav-link">About</Link>
 
-              <NavDropdown title="Solutions" id="solutions-dropdown" menuVariant="dark" className="nav_link dropdown_link">
-                {solutions.map((item) => (
-                  <NavDropdown.Item key={item.slug} as="div">
-                    <Link href={`/${item.slug}`} className="dropdown-item text-white">
-                      {item.shortName}
-                    </Link>
-                  </NavDropdown.Item>
-                ))}
-              </NavDropdown>
+        <NavDropdown
+          title="Solutions"
+          id="solutions-dropdown"
+          menuVariant="dark"
+          className="nav-link"
+        >
+          {solutions.map((item) => (
+            <NavDropdown.Item key={item.slug} as="div">
+              <Link href={`/${item.slug}`} className="dropdown-item text-white">
+                {item.shortName}
+              </Link>
+            </NavDropdown.Item>
+          ))}
+        </NavDropdown>
 
-              <Link href="/quality" className="nav_link nav-link">Quality</Link>
-              <Link href="/our-clients" className="nav_link nav-link">Clients</Link>
-              <Link href="/blog" className="nav_link nav-link">Blogs</Link>
-              <Link href="/career" className="nav_link nav-link">Career</Link>
+        <Link href="/quality" className="nav-link">Quality</Link>
+        <Link href="/our-clients" className="nav-link">Clients</Link>
+        <Link href="/blog" className="nav-link">Blogs</Link>
+        <Link href="/career" className="nav-link">Career</Link>
 
-              <Link href="/contact" className="contactbutton ms-lg-3">Contact</Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+        <Link href="/contact" className="contactbutton" >Contact</Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
+
     </div>
   );
 };

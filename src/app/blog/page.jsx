@@ -1,14 +1,15 @@
 import Link from "next/link";
+import { getData } from "../../utils/getBlogs"
 
-export async function getData() {
-  const res = await fetch(`/api/v1/blog`, {
-    cache: "force-cache",
-    next: {
-      revalidate: 60,
-    },
-  });
-  return res.json();
-}
+
+
+export const metadata = {
+  title: "Advanced Ultrasonic Solutions & NDT Equipment",
+  description:
+    "VIVACE SONICS PVT. LTD is a leading provider of ultrasonic testing solutions, NDT equipment, and composite testing systems. Based in Hyderabad, we specialize in high-quality probes, control systems, and non-destructive testing solutions for defense, nuclear, and space industries.",
+};
+
+
 
 const page = async () => {
   const data = await getData();
@@ -17,9 +18,11 @@ const page = async () => {
 
   return (
     <div className="container py-5">
+     
       <div className="row g-4">
         {data?.blogs?.map((blog) => (
-          <Link href={`/blog/${blog?.slug}`}
+          <Link
+            href={`/blog/${blog?.slug}`}
             className="col-12 col-md-6 col-lg-4 cursor-pointer"
             key={blog._id}
           >
@@ -44,7 +47,7 @@ const page = async () => {
                   {blog.metaDescription?.slice(0, 100)}...
                 </p>
                 <div className="text-end text-muted mt-auto">
-                  <small>👤 {blog.author}</small>
+                  <small>👤{blog.author}</small>
                 </div>
               </div>
             </div>
